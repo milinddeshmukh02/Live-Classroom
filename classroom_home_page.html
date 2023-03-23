@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Classroom</title>
+    <style>
+
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+header {
+  background-color: #052ab0;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+#signout{
+        width: 110px;
+        height: 45px;
+        border-radius: 20px;
+        color: white;
+        font-size: 12px;
+        border: 2px solid white;
+        border-color: white;
+        /* margin-top: 20px; */
+        background-color: #000000;
+        
+      }
+
+      #signout:hover{
+        background-color: #1f1c1c;
+      }
+
+      #signout:active{
+        box-shadow: 2px 2px 2px 2px rgba(26, 26, 27, 1.1);
+      }
+
+
+header h1 {
+  margin: 0;
+  
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  margin-right: 20px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  margin-top: 14px;
+  
+}
+
+.sidebar button {
+  display: block;
+  padding: 10px;
+  width: 25vw;
+  font-size: 18px;
+  background-color: #161616;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  
+}
+
+.sidebar button:active{
+        box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.5);
+      }
+
+.sidebar button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.content {
+  width: 70%;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.ipt{
+  margin-top: 5px;
+  width: 320px;
+  height: 35px;
+  border-radius: 20px;
+}
+::placeholder{
+  padding-right: 10px;
+}
+#livec{
+  padding-top: 0px;
+  padding-left: 25px;
+  width: 700px;
+   height: 400px; 
+}
+
+
+
+
+
+/* cards styling */
+
+
+.column {
+  float: left;
+  width: 26%;
+  padding: 30px 40px;
+  justify-content: space-between;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 10px 20px;
+    margin-left: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 0px;
+  padding-bottom: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+.lang_img{
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* .lang_img:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+} */
+
+
+.cards_block{
+  width: 100vw;
+  background: white;
+  padding-top: 40px;
+}
+
+#course{
+  font-size: 34px;
+  margin-left: 30px;
+}
+
+.apply_btn{
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  background-color: #f01b1b;
+}
+
+.apply_btn:active{
+        box-shadow: 2px 2px 2px 2px rgba(81, 3, 3, 0.5);
+      }
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* footer */
+
+.footer{
+background-color:#000;
+padding:10px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:gray;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:gray;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+footer{
+  background-color:#000;
+  margin-top: 50px;
+}
+
+.footer_logo{
+  width: 20px;
+  margin: 0px 10px;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1> E - Classroom </h1>
+      <input type="text" placeholder="&#128269; Search for Courses...." class="ipt">
+      <button type="button" id="signout" onclick = "window.location.href='index.html';">Sign Out</button>
+    </header>
+    <main>
+      <div class="main">
+      <div class="sidebar">
+        <h2>Classroom Features</h2>
+        <ul>
+          <li><button>Home</button></li>
+          <li><button>Announcements</button></li>
+          <li><button type="button">Assignments</button></li>
+          <li><button type="button">Discussions</button></li>
+          <li><button type="button">Grades</button></li>
+          <li><button type="button">Certificates</button></li>
+          <li><button type="button">Batchmates</button></li>
+          <li><button type="button" onclick = "window.location.href='session recording.html';">Session Recording</button></li>
+          <li><button type="button" onclick = "window.location.href='live_sessions.html';">Go To Live Class &#128246;</button></li>
+
+          
+        </ul>
+      </div>
+      <div class="content">
+        <h2>Welcome to our E-Classroom.</h2>
+        <p>Hey Students you can access all of the class materials, communicate with your classmates and instructors, and submit your assignments.</p>
+        <img src="kisspng-programmer-computer-programming-laptop-professiona-architectural-engineer-vector-material-5ad9edb20c2c80.8903493415242316020499.png" alt=" live_classe" id="livec">
+      </div>
+    </div>
+
+    <div class="cards_block">
+
+      <h2 id="course">Courses</h2>
+
+      <div class="row">
+
+        <div class="column">
+          <div class="card">
+            <img src="C-Programming.jpg" alt="c language" class="lang_img">
+            <h3> C </h3>
+            <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now </button>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="c++ language.png" alt="c++" class="lang_img">
+            <h3> C++ </h3>
+            <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now </button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img src="java lang.jpg" alt="java" class="lang_img">
+            <h3> Java </h3>
+            <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now </button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img src="python.jpg" alt="python" class="lang_img">
+            <h3> Python </h3>
+            <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now </button>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="html.jpg" alt="html" class="lang_img">
+              <h3> HTML </h3>
+              <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now </button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+                <img src="css2.png" alt="css" class="lang_img">
+              <h3> CSS </h3>
+              <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now</button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+                <img src="javascript.jpeg" alt="javascript" class="lang_img">
+              <h3> JavaScript </h3>
+              <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now </button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+                <img src="sql.avif" alt="SQL" class="lang_img">
+              <h3> SQL </h3>
+              <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now </button>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+                <img src="machinlearning.avif" alt="machine Learning" class="lang_img">
+              <h3> Machine Learning </h3>
+              <button type="button" class="apply_btn" onclick = "window.location.href='course_apply.html';"> Apply Now </button>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+
+    <footer>
+      <div class="footer">
+      <div class="row">
+      <a href="#"><img class="footer_logo" src="facebook-logo.png"></img></a>
+      <a href="#"><img class="footer_logo" src="instagram-logo.png"></img></a>
+      <a href="#"><img class="footer_logo" src="linkedin-logo.png"></img></a>
+      <a href="#"><img class="footer_logo" src="twitter-logo.png"></img></a>
+      </div>
+      
+      <div class="row">
+      <ul>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">Our Services</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Career</a></li>
+      </ul>
+      </div>
+      
+      <div class="row">
+      E-Classroom Copyright © 2023  - All rights reserved || Designed By: Milind Deshmukh & Pavan Chandrashekhar & Adarsh Gawali
+      </div>
+      </div>
+      </footer>
+
+      <script>
+
+        const sout=document.getElementById("signout")
+        sout.addEventListener('click', function(){
+          alert("You are Logging Out . . . . . !")
+        })
+
+      </script>
+
+  </body>
+</html>
